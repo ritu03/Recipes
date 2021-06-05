@@ -1,0 +1,7 @@
+export const RECIPE_LOAD = 'RECIPE_LOAD'
+export const RECIPE_SUCCESS = 'RECIPE_SUCCESS'
+export const RECIPE_FAILURE = 'RECIPE_FAILURE'
+
+export const CLEAR_STORE = 'CLEAR_STORE'
+
+
