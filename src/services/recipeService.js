@@ -3,10 +3,11 @@ import axios from 'axios'
 function recipeService () {
   return axios({
     method: 'GET',
-    url: 'localhost:3000/getrecipes',
+    url: `http://localhost:3000/recipes.json`,
     headers: {Accept: '*/*'}
   })
   .then (response => {
+    console.log('response in service ', response)
     if (response.status >= 400) {
       throw new Error(response.error)
     }

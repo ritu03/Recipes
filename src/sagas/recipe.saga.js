@@ -10,11 +10,11 @@ export function * handleRecipeLoad () {
 
   try {
     const RecipeResp = yield call(RecipeService.recipeService)
-    yield put(actions.recipeSuccess(RecipeResp.data))
+    yield put(actions.getRecipeSuccess(RecipeResp.data))
   } catch (error) {
     /** service call timeout - 50s **/
     if (error.code === 'ECONNABORTED' || !error.response) {
-      yield put(actions.recipeFailure('error'))
+      yield put(actions.getRecipeFailure('error'))
     } else {
       const resp = error.response
       yield handleRecipeErrors(resp)
@@ -25,7 +25,7 @@ export function * handleRecipeLoad () {
 export function * handleRecipeErrors (resp) {
   const failureData = getResponseKey(['data'], resp)
   // if (resp.status === 400) {
-    yield put(actions.recipeFailure(failureData))
+    yield put(actions.getRecipeFailure(failureData))
   // }
 }
 

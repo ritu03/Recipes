@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Recipes snapshot renders properly 1`] = `
+<div>
+  <div
+    class="sc-hKFxyN hHNCRy"
+  >
+    <header
+      class="sc-dlnjwi JlHph"
+    >
+      <h1>
+        Healthy Recipes by Ritu
+      </h1>
+    </header>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-8"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,3 +1,12 @@
+This project is a coding exercise for code challenges:
+1. Weather widget : Please Open (http://localhost:3000/weather) to visit the weather widget.
+        Prerequisites : Must install Allow CORS: Access-Control-Allow-Origin 0.1.6 Easily add (Access-Control-Allow-Origin: *) rule to the  response header. 
+                        Make sure to toggle it ON ( As free API used isn't allowing cross origin requests).
+
+2. Recipe Widget : Please Open (http://localhost:3000/recipe) to visit the weather widget.
+        Prerequisites : NULL
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

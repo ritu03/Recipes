@@ -4,7 +4,8 @@ import { default as AppReducers } from './reducer_app'
 import { CLEAR_STORE } from '../actions/action_types'
 
 const appReducer = combineReducers({
-  recipeData: AppReducers.RecipeReducer
+  recipeData: AppReducers.RecipeReducer,
+  weatherData: AppReducers.WeatherReducer
 })
 
 const rootReducer = (state, action) => {

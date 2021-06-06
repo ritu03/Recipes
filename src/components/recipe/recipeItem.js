@@ -8,13 +8,17 @@ const RecipeTile = styled.div`
   height: 250px;
   display: inline-block;
 `
+const TextWrapper = styled.div`
+text-align: center;
+`
+
 const RecipeItem = (props) => {
   useEffect(() => {
    console.log('values')
   }, [])
   return <RecipeTile>
-    <img  width={200} height={200} src={props.values.imageList.landscapewidedesktop1x.url} alt="recipe"></img>
-    <p>{props.values.title}</p>
+    <img  width={250} height={200} src={props.values.imageList.landscapewidedesktop1x.url}></img>
+    <TextWrapper><p>{props.values.title}</p></TextWrapper>
     </RecipeTile>
 }
 

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherDayWidget snapshot renders properly 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12 MuiGrid-grid-lg-2"
+  >
+    <div
+      class="sc-bdnxRM jPuVmM"
+    >
+      <div
+        class="sc-gtsrHT kSJRgO"
+      >
+        <p />
+      </div>
+      <img
+        height="75"
+        src="http://localhost:3000/weatherIcon_undefined.svg"
+        width="100"
+      />
+      <p>
+        <span
+          class="sc-dlnjwi jezzPh"
+        >
+          NaN
+           
+          <span>
+             ℉ 
+          </span>
+        </span>
+        <span
+          class="sc-hKFxyN iiIRvU"
+        >
+          NaN
+           
+          <span>
+             ℉ 
+          </span>
+        </span>
+      </p>
+      <p>
+        Wind Speed : 
+        NaN
+        kph
+      </p>
+    </div>
+  </div>
+</div>
+`;

@@ -2,36 +2,24 @@ import {useEffect} from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import styled from 'styled-components'
+import Grid from '@material-ui/core/Grid';
 
-import { default as Actions } from '../actions'
+import { default as Actions } from '../../actions'
 import RecipeItem from './recipeItem'
-import recipes from '../data/recipes.json'
+import {getResponseKey} from '../../util'
 
 const Appheader = styled.header`
   display: flex;
+  text-align: center;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: red;
 `
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-`
-const RecipeContainer = styled.div`
-/*Media queries */
-display: flex;
-flex-direction: column;
-width: 100%;
-margin-left: auto;
-margin-right: auto;
-@media (min-width: 769px) {
-  flex-direction: row;
-  width: 770px;
-  margin: auto;
-}
-   
+  justify:center;
 `
 const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(Actions, dispatch)
@@ -39,23 +27,27 @@ const mapDispatchToProps = dispatch => ({
 
 const mapStateToProps = (store) => {
   return {
-    recipes: store.recipeData
+    recipeData: store.recipeData
   }
 }
 const Recipes = (props) => {
   useEffect(() => {
-    // console.log('props', props)
-    // props.actions.recipeLoad()
+    props.actions.getRecipe()
   }, [])
+  
+  const contents = getResponseKey(['recipeData','data','contents'],props)
+  
   return (
     <MainContainer>
       <Appheader>
         <h1>Healthy Recipes by Ritu</h1>
       </Appheader>
-      <div>...loading</div>
-      <RecipeContainer>
-        {recipes.contents.map((item, index)=> <RecipeItem key={index} values={item} />)}
-      </RecipeContainer>
+      {/* <div>...loading</div> */}
+      <Grid container spacing={3} justify="center" alignItems="center">
+        <Grid container item xs={8}>
+         {contents && contents.map((item, index)=> <RecipeItem key={index} values={item} />)}
+        </Grid>
+      </Grid>
     </MainContainer>
   )
 } 

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RecipesItem snapshot renders properly 1`] = `
+<div>
+  <div
+    class="sc-bdnxRM djlCGH"
+  >
+    <img
+      height="200"
+      src="abc.com"
+      width="250"
+    />
+    <div
+      class="sc-gtsrHT kFRneN"
+    >
+      <p>
+        title123
+      </p>
+    </div>
+  </div>
+</div>
+`;

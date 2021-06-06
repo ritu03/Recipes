@@ -1,15 +1,15 @@
-// import * as actionType from './action_types'
+import * as actionType from './action_types'
 
-// import {default as action} from './index'
+import {default as action} from './index'
 
-// describe('Context API Actions', () => {
-//   it('should getContext ', () => {
-//     expect(action.getContext(actionType.GET_CONTEXT).type).toEqual('GET_CONTEXT')
-//   })
-//   it('should getContextSuccess ', () => {
-//     expect(action.getContextSuccess(actionType.GET_CONTEXT_SUCCESS).type).toEqual('GET_CONTEXT_SUCCESS')
-//   })
-//   it('should getContextFailure ', () => {
-//     expect(action.getContextFailure(actionType.GET_CONTEXT_FAILURE).type).toEqual('GET_CONTEXT_FAILURE')
-//   })
-// })
+describe('Recipe Actions', () => {
+  it('should getRecipe ', () => {
+    expect(action.getRecipe(actionType.RECIPE_LOAD).type).toEqual('RECIPE_LOAD')
+  })
+  it('should getRecipeSuccess ', () => {
+    expect(action.getRecipeSuccess(actionType.RECIPE_SUCCESS).type).toEqual('RECIPE_SUCCESS')
+  })
+  it('should getRecipeFailure ', () => {
+    expect(action.getRecipeFailure(actionType.RECIPE_FAILURE).type).toEqual('RECIPE_FAILURE')
+  })
+})
