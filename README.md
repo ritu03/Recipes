@@ -2,6 +2,8 @@ This project is a coding exercise for code challenges:
 1. Weather widget : Please Open (http://localhost:3000/weather) to visit the weather widget.
         Prerequisites : Must install Allow CORS: Access-Control-Allow-Origin 0.1.6 Easily add (Access-Control-Allow-Origin: *) rule to the  response header. 
                         Make sure to toggle it ON ( As free API used isn't allowing cross origin requests).
+        The free API gave data only 5 days in advance for free.
+        Since the API didn't respond weather image icons, they are kept in the public folder.
 
 2. Recipe Widget : Please Open (http://localhost:3000/recipe) to visit the weather widget.
         Prerequisites : NULL
